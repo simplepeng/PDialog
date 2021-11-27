@@ -11,6 +11,7 @@ abstract class PFullScreenDialog(context: Context) : PDialog(context) {
 
     override fun setHeight() = WindowManager.LayoutParams.MATCH_PARENT
 
+    //是否隐藏状态栏
     protected open fun isHideBar(): Boolean = true
 
     override fun onStart() {
