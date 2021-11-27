@@ -6,6 +6,7 @@ import android.view.Window
 import demo.simple.pdialog.dialog_fragment_impl.BottomDialogFragmentImpl
 import demo.simple.pdialog.dialog_fragment_impl.FullScreenDialogFragmentImpl
 import demo.simple.pdialog.databinding.ActivityMainBinding
+import demo.simple.pdialog.dialog_fragment_impl.PDialogFragmentImpl
 import demo.simple.pdialog.dialog_impl.*
 import me.simple.dialog.PDialogFragment
 
@@ -45,7 +46,7 @@ class MainActivity : AppCompatActivity() {
 
             //
             btnPDialogFragment.setOnClickListener {
-                PDialogFragment().show(supportFragmentManager)
+                PDialogFragmentImpl().show(supportFragmentManager)
             }
             btnNiceBottomDialogFragment.setOnClickListener {
                 BottomDialogFragmentImpl().show(supportFragmentManager)

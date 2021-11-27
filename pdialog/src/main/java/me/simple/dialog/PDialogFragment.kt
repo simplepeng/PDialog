@@ -19,16 +19,16 @@ open class PDialogFragment : DialogFragment(), IDialog {
 
     //
     open fun show(manager: FragmentManager) {
-        super.show(manager, null)
+        super.show(manager, this.javaClass.simpleName)
     }
 
     //
     open fun show(transaction: FragmentTransaction) {
-        super.show(transaction, null)
+        super.show(transaction, this.javaClass.simpleName)
     }
 
     //
     open fun showNow(manager: FragmentManager) {
-        super.showNow(manager, null)
+        super.showNow(manager, this.javaClass.simpleName)
     }
 }
