@@ -1,8 +1,8 @@
 package me.simple.dialog
 
-import android.graphics.Color
-import android.os.Build
 import android.view.WindowManager
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
 
 abstract class PFullScreenDialogFragment : PDialogFragment() {
 
@@ -19,9 +19,14 @@ abstract class PFullScreenDialogFragment : PDialogFragment() {
     }
 
     private fun hideBar() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP && isHideBar()) {
-            dialog?.window?.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
-            dialog?.window?.statusBarColor = Color.TRANSPARENT
+//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP && isHideBar()) {
+//            dialog?.window?.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
+//            dialog?.window?.statusBarColor = Color.TRANSPARENT
+//        }
+        val decorView = dialog?.window?.decorView ?: return
+        if (isHideBar()) {
+            val controller = ViewCompat.getWindowInsetsController(decorView) ?: return
+            controller.hide(WindowInsetsCompat.Type.statusBars())
         }
     }
 }
