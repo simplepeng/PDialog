@@ -33,7 +33,7 @@ class MainActivity : AppCompatActivity() {
             }
 
             btnEditDialog.setOnClickListener {
-                 EditNiceDialogImpl(context).show()
+                EditNiceDialogImpl(context).show()
             }
 
             btnBottomEditDialog.setOnClickListener {
@@ -46,7 +46,7 @@ class MainActivity : AppCompatActivity() {
 
             //
             btnPDialogFragment.setOnClickListener {
-                PDialogFragmentImpl().show(supportFragmentManager)
+                PDialogFragmentImpl().showAllowingStateLoss(supportFragmentManager)
             }
             btnNiceBottomDialogFragment.setOnClickListener {
                 BottomDialogFragmentImpl().show(supportFragmentManager)
