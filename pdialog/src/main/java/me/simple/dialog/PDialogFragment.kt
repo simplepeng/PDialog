@@ -1,6 +1,7 @@
 package me.simple.dialog
 
 import android.os.Bundle
+import android.view.View
 import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentTransaction
@@ -15,6 +16,11 @@ open class PDialogFragment : DialogFragment(), IDialog {
     override fun onStart() {
         initWindowSetting(dialog?.window)
         super.onStart()
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
     }
 
     //

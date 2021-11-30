@@ -3,12 +3,9 @@ package demo.simple.pdialog
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Window
-import demo.simple.pdialog.dialog_fragment_impl.BottomDialogFragmentImpl
-import demo.simple.pdialog.dialog_fragment_impl.FullScreenDialogFragmentImpl
 import demo.simple.pdialog.databinding.ActivityMainBinding
-import demo.simple.pdialog.dialog_fragment_impl.PDialogFragmentImpl
+import demo.simple.pdialog.dialog_fragment_impl.*
 import demo.simple.pdialog.dialog_impl.*
-import me.simple.dialog.PDialogFragment
 
 class MainActivity : AppCompatActivity() {
 
@@ -33,7 +30,7 @@ class MainActivity : AppCompatActivity() {
             }
 
             btnEditDialog.setOnClickListener {
-                EditNiceDialogImpl(context).show()
+                EditDialogImpl(context).show()
             }
 
             btnBottomEditDialog.setOnClickListener {
@@ -48,10 +45,20 @@ class MainActivity : AppCompatActivity() {
             btnPDialogFragment.setOnClickListener {
                 PDialogFragmentImpl().showAllowingStateLoss(supportFragmentManager)
             }
-            btnNiceBottomDialogFragment.setOnClickListener {
+
+            btnEditDialogFragment.setOnClickListener {
+                EditDialogFragmentImpl().showNowAllowingStateLoss(supportFragmentManager)
+            }
+
+            btnBottomDialogFragment.setOnClickListener {
                 BottomDialogFragmentImpl().show(supportFragmentManager)
             }
-            btnNiceFullScreenDialogFragment.setOnClickListener {
+
+            btnBottomEditDialogFragment.setOnClickListener {
+                EditBottomDialogFragmentImpl().showNowAllowingStateLoss(supportFragmentManager)
+            }
+
+            btnFullScreenDialogFragment.setOnClickListener {
                 FullScreenDialogFragmentImpl().show(supportFragmentManager)
             }
         }

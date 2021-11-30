@@ -19,13 +19,16 @@ interface IDialog {
     fun setAnimRes(): Int = 0
 
     //是否自动显示软键盘
+    //Android P(9.0)以上版本需要调用EditText.requestFocus()
+    //让View获取到焦点才行
     fun autoShowSoftInput() = false
 
     fun initWindowSetting(window: Window?) {
         if (window == null) return
 
         if (autoShowSoftInput()) {
-            window.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_VISIBLE)
+//            window.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_VISIBLE)
+            window.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_VISIBLE)
         }
 
         val params = window.attributes

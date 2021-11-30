@@ -1,9 +1,6 @@
 package me.simple.dialog
 
 import android.content.Context
-import android.graphics.Color
-import android.os.Build
-import android.view.WindowInsets
 import android.view.WindowManager
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat

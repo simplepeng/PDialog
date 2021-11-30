@@ -6,9 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.EditText
 import demo.simple.pdialog.R
-import me.simple.dialog.PBottomDialogFragment
+import me.simple.dialog.PDialogFragment
 
-class EditBottomDialogFragmentImpl : PBottomDialogFragment() {
+class EditDialogFragmentImpl : PDialogFragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater,

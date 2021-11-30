@@ -8,7 +8,7 @@
     tools:ignore="HardcodedText">
 
     <Button
-        android:id="@+id/btn_pDialog"
+        android:id="@+id/btnPDialog"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
@@ -17,47 +17,47 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/btn_bottomDialog"
+        android:id="@+id/btnBottomDialog"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
         android:text="BottomDialog"
-        app:layout_constraintStart_toEndOf="@id/btn_pDialog"
+        app:layout_constraintStart_toEndOf="@id/btnPDialog"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/btn_editDialog"
+        android:id="@+id/btnEditDialog"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
         android:text="EditDialog"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_pDialog" />
+        app:layout_constraintTop_toBottomOf="@+id/btnPDialog" />
 
     <Button
-        android:id="@+id/btn_bottomEditDialog"
+        android:id="@+id/btnBottomEditDialog"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
         android:text="BottomEditDialog"
-        app:layout_constraintStart_toEndOf="@id/btn_editDialog"
-        app:layout_constraintTop_toBottomOf="@+id/btn_pDialog" />
+        app:layout_constraintStart_toEndOf="@id/btnEditDialog"
+        app:layout_constraintTop_toBottomOf="@+id/btnPDialog" />
 
     <Button
-        android:id="@+id/btn_fullDialog"
+        android:id="@+id/btnFullDialog"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
         android:text="FullScreenDialog"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_bottomEditDialog" />
+        app:layout_constraintTop_toBottomOf="@+id/btnBottomEditDialog" />
 
     <View
         android:id="@+id/viewLine"
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="@android:color/darker_gray"
-        app:layout_constraintTop_toBottomOf="@id/btn_fullDialog" />
+        app:layout_constraintTop_toBottomOf="@id/btnFullDialog" />
 
     <Button
         android:id="@+id/btnPDialogFragment"
@@ -70,20 +70,39 @@
         app:layout_constraintTop_toBottomOf="@+id/viewLine" />
 
     <Button
-        android:id="@+id/btnNiceBottomDialogFragment"
+        android:id="@+id/btnEditDialogFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:layout_marginTop="30dp"
+        android:text="EditDialogFragment"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnPDialogFragment" />
+
+    <Button
+        android:id="@+id/btnBottomDialogFragment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
         android:text="BottomDialogFragment"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnPDialogFragment" />
+        app:layout_constraintTop_toBottomOf="@+id/btnEditDialogFragment" />
 
     <Button
-        android:id="@+id/btnNiceFullScreenDialogFragment"
+        android:id="@+id/btnBottomEditDialogFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:text="BottomEditDialogFragment"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnBottomDialogFragment" />
+
+    <Button
+        android:id="@+id/btnFullScreenDialogFragment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
         android:text="FullScreenDialogFragment"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnNiceBottomDialogFragment" />
+        app:layout_constraintTop_toBottomOf="@+id/btnBottomEditDialogFragment" />
 </androidx.constraintlayout.widget.ConstraintLayout>
