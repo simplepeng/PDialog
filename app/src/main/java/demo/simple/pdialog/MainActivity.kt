@@ -3,6 +3,7 @@ package demo.simple.pdialog
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Window
+import android.widget.Toast
 import demo.simple.pdialog.databinding.ActivityMainBinding
 import demo.simple.pdialog.dialog_fragment_impl.*
 import demo.simple.pdialog.dialog_impl.*
@@ -43,7 +44,19 @@ class MainActivity : AppCompatActivity() {
 
             //
             btnPDialogFragment.setOnClickListener {
-                PDialogFragmentImpl().showAllowingStateLoss(supportFragmentManager)
+                val dialog = PDialogFragmentImpl()
+                dialog.showAllowingStateLoss(supportFragmentManager)
+
+                dialog.dialog?.setOnShowListener {
+                    showToast("OnShow")
+                }
+                dialog.dialog?.setOnDismissListener {
+                    showToast("OnDismiss")
+                }
+                dialog.dialog?.setOnCancelListener {
+                    showToast("OnCancel")
+                }
+
             }
 
             btnEditDialogFragment.setOnClickListener {
@@ -62,6 +75,10 @@ class MainActivity : AppCompatActivity() {
                 FullScreenDialogFragmentImpl().show(supportFragmentManager)
             }
         }
+    }
+
+    private fun showToast(text: String) {
+        Toast.makeText(this, text, Toast.LENGTH_SHORT).show()
     }
 
 }
