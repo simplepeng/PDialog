@@ -5,7 +5,7 @@ import android.view.WindowManager
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
-abstract class PFullScreenDialog(context: Context) : PDialog(context) {
+open class PFullScreenDialog(context: Context) : PDialog(context) {
 
     override fun setWidth() = WindowManager.LayoutParams.MATCH_PARENT
 

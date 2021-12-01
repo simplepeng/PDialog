@@ -4,7 +4,7 @@ import android.content.Context
 import android.view.Gravity
 import android.view.WindowManager
 
-abstract class PBottomDialog(context: Context) : PDialog(context) {
+open class PBottomDialog(context: Context) : PDialog(context) {
 
     override fun setWidth() = WindowManager.LayoutParams.MATCH_PARENT
 

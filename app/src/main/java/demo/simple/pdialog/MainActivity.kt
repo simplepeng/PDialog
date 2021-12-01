@@ -7,6 +7,9 @@ import android.widget.Toast
 import demo.simple.pdialog.databinding.ActivityMainBinding
 import demo.simple.pdialog.dialog_fragment_impl.*
 import demo.simple.pdialog.dialog_impl.*
+import me.simple.dialog.show
+import me.simple.dialog.showAllowingStateLoss
+import me.simple.dialog.showNowAllowingStateLoss
 
 class MainActivity : AppCompatActivity() {
 

@@ -3,7 +3,7 @@ package me.simple.dialog
 import android.app.Dialog
 import android.content.Context
 
-abstract class PDialog : Dialog, IDialog {
+open class PDialog : Dialog, IDialog {
 
     constructor(context: Context) : super(context, R.style.PDialog)
 
