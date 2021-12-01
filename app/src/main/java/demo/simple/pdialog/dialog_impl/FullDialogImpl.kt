@@ -12,5 +12,5 @@ class FullDialogImpl(context: Context) : PFullDialog(context) {
         setContentView(R.layout.dialog_full)
     }
 
-
+    override fun isHideBar() = true
 }

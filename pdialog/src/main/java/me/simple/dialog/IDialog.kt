@@ -21,7 +21,7 @@ interface IDialog {
     //是否自动显示软键盘
     //Android P(9.0)以上版本需要调用EditText.requestFocus()
     //让View获取到焦点才行
-    fun autoShowSoftInput() = false
+    fun isShowSoftInput() = false
 
     fun initWindowSetting(window: Window?) {
         if (window == null) return
@@ -39,9 +39,22 @@ interface IDialog {
     }
 
     fun checkVisibleSoftInput(window: Window?) {
-        if (autoShowSoftInput()) {
+        if (isShowSoftInput()) {
             window?.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_VISIBLE)
 //            window.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_VISIBLE)
+        }
+    }
+
+    //是否隐藏状态栏
+    fun isHideBar(): Boolean = false
+
+    fun checkHideBar(window: Window?) {
+        if (window == null) return
+
+        if (isHideBar()) {
+            window.addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN)
+//            val controller = ViewCompat.getWindowInsetsController(this.window!!.decorView.rootView)
+//            controller?.hide(WindowInsetsCompat.Type.statusBars())
         }
     }
 }

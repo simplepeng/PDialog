@@ -17,7 +17,7 @@ class BottomEditDialogImpl(
         findViewById<EditText>(R.id.editText)?.requestFocus()
     }
 
-    override fun autoShowSoftInput(): Boolean {
+    override fun isShowSoftInput(): Boolean {
         return true
     }
 }

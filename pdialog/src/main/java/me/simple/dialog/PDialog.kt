@@ -10,6 +10,7 @@ open class PDialog(
 
     override fun onStart() {
         checkVisibleSoftInput(window)
+        checkHideBar(window)
         initWindowSetting(window)
         super.onStart()
     }
