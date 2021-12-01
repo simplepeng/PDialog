@@ -1,9 +1,9 @@
 package me.simple.dialog
 
-import android.app.Dialog
 import android.content.Context
+import androidx.appcompat.app.AppCompatDialog
 
-open class PDialog : Dialog, IDialog {
+open class PDialog : AppCompatDialog, IDialog {
 
     constructor(context: Context) : super(context, R.style.PDialog)
 

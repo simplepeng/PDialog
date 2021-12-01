@@ -1,12 +1,10 @@
 package me.simple.dialog
 
 import android.os.Bundle
-import android.view.View
-import androidx.fragment.app.DialogFragment
-import androidx.fragment.app.FragmentManager
-import androidx.fragment.app.FragmentTransaction
+import android.view.LayoutInflater
+import androidx.appcompat.app.AppCompatDialogFragment
 
-open class PDialogFragment : DialogFragment(), IDialog {
+open class PDialogFragment : AppCompatDialogFragment(), IDialog {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -18,4 +16,7 @@ open class PDialogFragment : DialogFragment(), IDialog {
         super.onStart()
     }
 
+    override fun onGetLayoutInflater(savedInstanceState: Bundle?): LayoutInflater {
+        return super.onGetLayoutInflater(savedInstanceState)
+    }
 }
