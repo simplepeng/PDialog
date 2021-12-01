@@ -12,6 +12,8 @@ open class PDialogFragment : AppCompatDialogFragment(), IDialog {
     }
 
     override fun onStart() {
+        checkHideBar(dialog?.window)
+        checkVisibleSoftInput(dialog?.window)
         initWindowSetting(dialog?.window)
         super.onStart()
     }

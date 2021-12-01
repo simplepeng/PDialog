@@ -8,4 +8,5 @@ open class PFullDialogFragment : PDialogFragment() {
 
     override fun setHeight() = WindowManager.LayoutParams.MATCH_PARENT
 
+    override fun isHideBar() = true
 }
