@@ -8,7 +8,9 @@ import android.widget.EditText
 import demo.simple.pdialog.R
 import me.simple.dialog.PBottomDialogFragment
 
-class EditBottomDialogFragmentImpl : PBottomDialogFragment() {
+class BottomEditDialogFragmentImpl : PBottomDialogFragment() {
+
+    override fun isShowSoftInput() = true
 
     override fun onCreateView(
         inflater: LayoutInflater,

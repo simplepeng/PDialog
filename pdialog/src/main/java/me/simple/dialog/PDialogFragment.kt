@@ -2,6 +2,7 @@ package me.simple.dialog
 
 import android.os.Bundle
 import android.view.LayoutInflater
+import android.view.View
 import androidx.appcompat.app.AppCompatDialogFragment
 
 open class PDialogFragment : AppCompatDialogFragment(), IDialog {
@@ -12,8 +13,8 @@ open class PDialogFragment : AppCompatDialogFragment(), IDialog {
     }
 
     override fun onStart() {
-        checkHideBar(dialog?.window)
         checkVisibleSoftInput(dialog?.window)
+        checkHideBar(dialog?.window)
         initWindowSetting(dialog?.window)
         super.onStart()
     }
