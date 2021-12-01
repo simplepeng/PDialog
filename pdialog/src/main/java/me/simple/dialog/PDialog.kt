@@ -9,6 +9,7 @@ open class PDialog(
 ) : AppCompatDialog(context, themeResId), IDialog {
 
     override fun onStart() {
+        checkVisibleSoftInput(window)
         initWindowSetting(window)
         super.onStart()
     }

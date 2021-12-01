@@ -13,7 +13,7 @@ class EditDialogImpl(context: Context) : PEditDialog(context) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.dialog_edit)
 
-//        findViewById<EditText>(R.id.editText)?.requestFocus()
+        findViewById<EditText>(R.id.editText)?.requestFocus()
     }
 
 }

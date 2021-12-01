@@ -8,13 +8,16 @@ import me.simple.dialog.PBottomDialog
 
 class BottomEditDialogImpl(
     context: Context
-) : PBottomDialog(context, R.style.PEditDialog) {
+) : PBottomDialog(context) {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.dialog_edit)
 
-//        findViewById<EditText>(R.id.editText)?.requestFocus()
+        findViewById<EditText>(R.id.editText)?.requestFocus()
     }
 
+    override fun autoShowSoftInput(): Boolean {
+        return true
+    }
 }
