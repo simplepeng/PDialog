@@ -48,7 +48,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
-        android:text="FullScreenDialog"
+        android:text="FullDialog"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnBottomEditDialog" />
 
@@ -107,11 +107,11 @@
         app:layout_constraintTop_toBottomOf="@+id/btnBottomDialogFragment" />
 
     <Button
-        android:id="@+id/btnFullScreenDialogFragment"
+        android:id="@+id/btnFullDialogFragment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
-        android:text="FullScreenDialogFragment"
+        android:text="FullDialogFragment"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnBottomEditDialogFragment" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -38,7 +38,7 @@ class MainActivity : AppCompatActivity() {
             }
 
             btnBottomEditDialog.setOnClickListener {
-                EditBottomDialogImpl(context).show()
+                BottomEditDialogImpl(context).show()
             }
 
             btnFullDialog.setOnClickListener {
@@ -78,7 +78,7 @@ class MainActivity : AppCompatActivity() {
                 EditBottomDialogFragmentImpl().showNowAllowingStateLoss(supportFragmentManager)
             }
 
-            btnFullScreenDialogFragment.setOnClickListener {
+            btnFullDialogFragment.setOnClickListener {
                 FullDialogFragmentImpl().show(supportFragmentManager)
             }
         }

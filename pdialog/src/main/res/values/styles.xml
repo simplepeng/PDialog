@@ -9,11 +9,16 @@
         <item name="android:colorBackgroundCacheHint">@null</item>
         <item name="windowActionBar">false</item>
         <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
         <item name="windowNoTitle">true</item>
     </style>
 
     <style name="PFullDialog" parent="PDialog">
         <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="PEditDialog" parent="PDialog">
+        <item name="android:windowSoftInputMode">stateAlwaysVisible</item>
     </style>
 
     <style name="PBottomDialogAnim">
