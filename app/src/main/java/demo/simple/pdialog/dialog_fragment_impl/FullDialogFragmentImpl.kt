@@ -5,9 +5,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import demo.simple.pdialog.R
-import me.simple.dialog.PFullScreenDialogFragment
+import me.simple.dialog.PFullDialogFragment
 
-class FullScreenDialogFragmentImpl : PFullScreenDialogFragment() {
+class FullDialogFragmentImpl : PFullDialogFragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater,

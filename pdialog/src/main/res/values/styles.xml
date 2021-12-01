@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="PDialog" parent="@android:style/Theme.Dialog">
+    <style name="PDialog" parent="@style/Theme.AppCompat.Dialog">
         <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFrame">@null</item>
         <item name="android:windowTitleStyle">@null</item>
         <item name="android:windowBackground">@android:color/transparent</item>
         <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="PFullDialog" parent="PDialog">
+        <item name="android:windowFullscreen">true</item>
     </style>
 
     <style name="PBottomDialogAnim">

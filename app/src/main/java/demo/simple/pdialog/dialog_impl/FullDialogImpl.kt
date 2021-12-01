@@ -3,9 +3,9 @@ package demo.simple.pdialog.dialog_impl
 import android.content.Context
 import android.os.Bundle
 import demo.simple.pdialog.R
-import me.simple.dialog.PFullScreenDialog
+import me.simple.dialog.PFullDialog
 
-class FullScreenDialogImpl(context: Context) : PFullScreenDialog(context) {
+class FullDialogImpl(context: Context) : PFullDialog(context) {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

@@ -16,7 +16,4 @@ open class PDialogFragment : AppCompatDialogFragment(), IDialog {
         super.onStart()
     }
 
-    override fun onGetLayoutInflater(savedInstanceState: Bundle?): LayoutInflater {
-        return super.onGetLayoutInflater(savedInstanceState)
-    }
 }

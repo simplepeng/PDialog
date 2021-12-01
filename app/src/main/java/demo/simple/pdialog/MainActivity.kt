@@ -42,7 +42,11 @@ class MainActivity : AppCompatActivity() {
             }
 
             btnFullDialog.setOnClickListener {
-                FullScreenDialogImpl(context).show()
+                FullDialogImpl(context).show()
+            }
+
+            btnLoadingDialog.setOnClickListener {
+                LoadingDialog(this@MainActivity).show()
             }
 
             //
@@ -75,7 +79,7 @@ class MainActivity : AppCompatActivity() {
             }
 
             btnFullScreenDialogFragment.setOnClickListener {
-                FullScreenDialogFragmentImpl().show(supportFragmentManager)
+                FullDialogFragmentImpl().show(supportFragmentManager)
             }
         }
     }
