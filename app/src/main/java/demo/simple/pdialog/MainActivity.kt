@@ -26,7 +26,17 @@ class MainActivity : AppCompatActivity() {
 
         with(binding) {
             btnPDialog.setOnClickListener {
-                PDialogImpl(context).show()
+                val dialog = PDialogImpl(context)
+                dialog.setOnShowListener {
+                    showToast("OnShow")
+                }
+                dialog.setOnDismissListener {
+                    showToast("OnDismiss")
+                }
+                dialog.setOnCancelListener {
+                    showToast("OnCancel")
+                }
+                dialog.show()
             }
 
             btnBottomDialog.setOnClickListener {
@@ -52,18 +62,16 @@ class MainActivity : AppCompatActivity() {
             //
             btnPDialogFragment.setOnClickListener {
                 val dialog = PDialogFragmentImpl()
-                dialog.showAllowingStateLoss(supportFragmentManager)
-
-                dialog.dialog?.setOnShowListener {
+                dialog.setOnShowListener {
                     showToast("OnShow")
                 }
-                dialog.dialog?.setOnDismissListener {
+                dialog.setOnDismissListener {
                     showToast("OnDismiss")
                 }
-                dialog.dialog?.setOnCancelListener {
+                dialog.setOnCancelListener {
                     showToast("OnCancel")
                 }
-
+                dialog.showAllowingStateLoss(supportFragmentManager)
             }
 
             btnEditDialogFragment.setOnClickListener {
