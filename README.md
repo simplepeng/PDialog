@@ -1,6 +1,6 @@
 # PDialog
 
-[![](https://jitpack.io/v/simplepeng/NiceDialog.svg)](https://jitpack.io/#simplepeng/NiceDialog)
+[![](https://jitpack.io/v/simplepeng/PDialog.svg)](https://jitpack.io/#simplepeng/PDialog)
 
 ## 依赖
 
