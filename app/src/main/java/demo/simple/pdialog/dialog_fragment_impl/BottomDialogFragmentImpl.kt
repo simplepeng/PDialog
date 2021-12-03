@@ -16,4 +16,6 @@ class BottomDialogFragmentImpl : PBottomDialogFragment() {
     ): View? {
         return inflater.inflate(R.layout.dialog_p_impl, container, false)
     }
+
+    override fun isNotTouchModel() = true
 }

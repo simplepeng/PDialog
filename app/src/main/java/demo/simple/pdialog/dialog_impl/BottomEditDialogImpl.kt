@@ -20,4 +20,6 @@ class BottomEditDialogImpl(
     override fun isShowSoftInput(): Boolean {
         return true
     }
+
+
 }

@@ -23,6 +23,9 @@ interface IDialog {
     //让View获取到焦点才行
     fun isShowSoftInput() = false
 
+    //是否透传手势事件
+    fun isNotTouchModel(): Boolean = false
+
     fun initWindowSetting(window: Window?) {
         if (window == null) return
 
@@ -34,6 +37,10 @@ interface IDialog {
         params.gravity = setGravity()
 
         window.setWindowAnimations(setAnimRes())
+
+        if (isNotTouchModel()) {
+            window.addFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCH_MODAL)
+        }
 
         window.attributes = params
     }

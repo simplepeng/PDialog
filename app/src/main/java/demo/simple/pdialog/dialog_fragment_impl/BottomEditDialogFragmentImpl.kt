@@ -24,4 +24,5 @@ class BottomEditDialogFragmentImpl : PBottomDialogFragment() {
         super.onViewCreated(view, savedInstanceState)
         view.findViewById<EditText>(R.id.editText)?.requestFocus()
     }
+
 }

@@ -12,5 +12,5 @@ class BottomDialogImpl(context: Context) : PBottomDialog(context) {
         setContentView(R.layout.dialog_p_impl)
     }
 
-
+    override fun isNotTouchModel() = true
 }
